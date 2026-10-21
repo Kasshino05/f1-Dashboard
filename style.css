@@ -1,0 +1,148 @@
+/* ===== PAGE ===== */
+body {
+    margin: 0;
+    padding: 30px;
+    font-family: "Titillium Web", sans-serif;
+    color: white;
+    background-color: #0b0b0f;
+    /* carbon fibre pattern: two checkered gradients on top of each other */
+    background-image:
+            linear-gradient(45deg, #111 25%, transparent 25%, transparent 75%, #111 75%),
+            linear-gradient(45deg, #111 25%, transparent 25%, transparent 75%, #111 75%);
+    background-size: 8px 8px;
+    background-position: 0 0, 4px 4px;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    font-style: italic;
+    text-transform: uppercase;
+    margin: 0 0 30px;
+    letter-spacing: 2px;
+}
+h1 span { color: #ff8000; }
+
+
+/* ===== COUNTDOWN ===== */
+.countdown-card {
+    /* sharp diagonal split: orange left, dark right */
+    background: linear-gradient(110deg, #ff8000 0%, #ff8000 40%, #1a1a22 40%);
+    border-radius: 10px;
+    padding: 25px 30px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.next-label {
+    color: black;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.85rem;
+}
+
+.next-race {
+    color: black;
+    font-size: 2rem;
+    font-weight: 900;
+    font-style: italic;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.next-place { color: #222; }
+
+.timer { display: flex; gap: 15px; }
+.unit { text-align: center; }
+
+.unit .num {
+    font-size: 2.5rem;
+    font-weight: 900;
+    font-style: italic;
+    line-height: 1;
+}
+
+.unit .lbl {
+    color: #888;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+/* ===== CARD LAYOUT ===== */
+.grid {
+    display: grid;
+    /* as many columns as fit, each at least 350px wide */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: rgba(25, 25, 32, 0.9);
+    border-top: 4px solid #ff8000;
+    border-radius: 0 0 10px 10px;
+    padding: 20px;
+}
+
+.card h2 {
+    margin: 0 0 15px;
+    font-style: italic;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.race-place {
+    color: #888;
+    margin: -10px 0 15px;
+    font-size: 0.9rem;
+}
+
+
+/* ===== ROWS (one per driver / team) ===== */
+.row {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 6px;
+    background: #16161d;
+    border-radius: 4px;
+    transition: transform 0.2s;
+}
+.row:hover { transform: translateX(8px); background: #20202a; }
+
+.pos {
+    width: 40px;
+    font-weight: 900;
+    font-size: 1.3rem;
+    font-style: italic;
+}
+
+/* podium colours for P1, P2, P3 */
+.pos.p1 { color: #ffd700; }
+.pos.p2 { color: #c0c0c0; }
+.pos.p3 { color: #cd7f32; }
+
+.bar {
+    width: 5px;
+    height: 30px;
+    margin-right: 12px;
+    transform: skewX(-15deg);   /* the slanted F1 look */
+}
+
+.name { flex: 1; }
+.name b { text-transform: uppercase; }
+.team { color: #888; font-size: 0.85rem; }
+
+.points {
+    background: #ff8000;
+    color: black;
+    font-weight: 900;
+    padding: 4px 12px;
+    transform: skewX(-15deg);
+}
